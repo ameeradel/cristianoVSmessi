@@ -1,0 +1,117 @@
+/* Reset and basic styles */
+body, h1, h2, h3, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #0056b3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #003d7a;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.player {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.player:hover {
+    transform: scale(1.05);
+}
+
+.player img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.stats, .achievements {
+    margin-top: 20px;
+    display: none; /* Hidden by default */
+}
+
+.stats.active, .achievements.active {
+    display: block; /* Shown when active */
+}
+
+.stats h3, .achievements h3 {
+    text-align: center;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.stats table, .achievements table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.stats table th, .stats table td, 
+.achievements table th, .achievements table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.stats table th, .achievements table th {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .player {
+        width: 100%;
+    }
+}
